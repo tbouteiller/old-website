@@ -70,9 +70,8 @@ a {
 }
 
 a:hover {
-  color: #EAF6F6;
+  color: #2bc4ad;
 }
-
 
 .top-container {
   background-color: #E4F9F5;
@@ -149,6 +148,10 @@ a:hover {
 }
 
 .profile-logo {
+  width: 25%;
+}
+
+.project-logo {
   width: 25%;
 }
 
