@@ -1,89 +1,65 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">          <!--HTML-->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+    <title>Tanner Bouteiller</title>
+  </head>
 
-<head>                              <!--HEAD-->
-  <meta charset="utf-8">
-  <title>Tanner Bouteiller</title>  <!--TITLE-->
-  <link rel="stylesheet" href="styles.css">
-  <link rel="icon" href="favicon.ico">
-  <link href="https://fonts.googleapis.com/css?family=Merriweather|Montserrat|Sacramento&display=swap" rel="stylesheet">
-</head>
+  <body>
+    <section class="main">
+      <header>
+        <h2 class="logo">Tanner Bouteiller</h2>
+        <div class="toggle"></div>
+      </header>
+      <video src="abstract2.mp4" muted loop autoplay></video>
 
-<body>
+      <div class="overlay"></div>
 
-  <div class="top-container">
-    <img class="top-cloud" src="cloud.png" alt="cloud-img">
-    <h1 class="fadeInAnimation">I'm Tanner.</h1>                        <!--H1-->
-    <h2 id="second" class="fadeInAnimation">a BIT student</h2>          <!--H2-->
-    <img class="bottom-cloud" src="cloud.png" alt="cloud-img">   <!--IMG-->
-    <img class="intro-image" src="grass.png" alt="mountain-img">
-  </div>
-
-  <div class="middle-container">
-
-    <div class="profile">
-      <img class="profile-logo" src="user.jpg" alt="">
-      <br>
-      <h2 class="test">Hi there</h2> <div class="test2"><p class="blinking">.</p></div>
-      <p class="intro">I am currently a Businesss Information Technology student at Red River College. <!--P-->
-      I enjoy learning web development and working with new technologies. 
-      One of my favorite hobbies is playing video games!</p>  <!--BR, H5-->
-    </div>
-
-    <hr>
-
-    <div class="projects">
-      <img class="project-logo" src="projectimg.jpg" alt="">
-      <br>
-      <h2 class="test">My Projects</h2> <div class="test2"><p class="blinking">.</p></div>
-      <p class="intro">Below are some mini projects I have completed!</p>
-      <a href="ExpansionCards.html" target="_blank">EXPANSION CARDS</a>
-      <a href="ProgressSteps.html" target="_blank">PROGRESS STEPS</a>  <!--BR, H5-->
-      <a href="RotatingNav.html" target="_blank">ROTATING NAV</a>
-      <a href="BlurredLoading.html" target="_blank">BLURRED LOADING</a>
-    </div>
-
-    <hr>
-
-    <div class="skills">
-      <h2 class="test">Some of My Skills</h2> <div class="test2"><p class="blinking">.</p></div>
-      <div class="skill-row">
-        <img class="skill-logo-html5" src="html-logo.png" alt="">
-        <h3>HTML5</h3>  <!--H3-->
-        <ul>            <!--OL-->
-          <li><h4>Comfortable using layout elements such as header, nav, division, section, etc</h4></li> <!--H4, LI-->
-          <li><h4>Competent with the use of tags and classes to structure HTML document</h4></li>
-          <li><h4>Can implement forms and input types within HTML</h4></li>
-        </ul>
+      <div class="text">
+        <h2>WELCOME</h2>
+        <h3>To My Portfolio.</h3>
+        <p>
+          Hi there, my name is Tanner and I am a current Business Information
+          Technology student at Red River College. This is my portfolio site so
+          please take a look and check out some of my work!
+        </p>
+        <a href="#">Explore</a>
       </div>
 
-      <div class="skill-row">
-        <img class="skill-logo-css3" src="css-logo.png" alt="">
-        <h3>CSS3</h3>
-        <ul>    <!--UL-->
-          <li><h4>Utilize CSS grid and flexbox in regards to positioning</h4></li>
-          <li><h4>Understand CSS syntax including the use of variables</h4></li>
-          <li><h4>Implement responsive featues such as viewport and media queries.</h4></li>
-      </div>
+      <ul class="social">
+        <li>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+        </li>
+        <li>
+          <a href="#"><i class="fab fa-github-square"></i></a>
+        </li>
+        <li><a href="#"><i class="fab fa-twitter-square"></i></a></i></li>
+      </ul>
+    </section>
+
+    <div class="menu">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
     </div>
 
-    <hr>
+    <script>
+        const toggleEffect = document.querySelector('.toggle');
+        const mainEffect = document.querySelector('.main');
 
-    <div class="contact-me">
-      <h2 class="test">Contact Me</h2> <div class="test2"><p class="blinking">.</p></div>
-      <h3>Feel free to connect with me below!</h3>
-      <p class="contact-message">Lorem ipsum dolor sit amet, in quis, aenean amet. Phasellus sodales, tellus donec dui, ornare erat.</p>
-      <a class="btn" href="mailto:tannerbouteiller@gmail.com">CONTACT ME</a>
-    </div>
-    
-  </div>
-
-  <div class="bottom-container">
-    <a class="footer-link" href="https://www.linkedin.com/">LinkedIn</a>
-    <a class="footer-link" href="https://twitter.com/">Twitter</a>
-    <a class="footer-link" href="https://google.ca">Website</a>
-    <p class="copyright"><h6>© 2020 Tanner Bouteiler.</h6></p>  <!---H6-->
-  </div>
-
-</body>
+        toggleEffect.addEventListener('click', () => {
+            toggleEffect.classList.toggle('active')
+            mainEffect.classList.toggle('active')
+        })
+    </script>
+  </body>
 </html>
