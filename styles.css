@@ -1,240 +1,197 @@
-body {
-  color: #40514E;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700;800&display=swap");
+
+* {
   margin: 0;
-  text-align: center;
-  font-family: 'Merriweather', serif;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppens", sans-serif;
 }
 
-h1 {
-  color: #66BFBF;
-  font-size: 5.625rem;
-  margin: 50px auto 0 auto;
-  font-family: 'Sacramento', cursive;
-}
-
-h1:hover {
-  opacity: 80%;
-  
-}
-
-h2 {
-  color: #66BFBF;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 2.5rem;
-  font-weight: normal;
-  padding-bottom: 10px;
-}
-
-h2:hover {
-  opacity: 80%;
-  border-bottom: 2px solid;
-}
-
-#second {
-  border: none;
-  width: auto;
-}
-
-h3 {
-  color: #11999E;
-  font-family: 'Montserrat', sans-serif;
-}
-
-h4 {
-  margin: 0;
-  padding: 2px 0;
-  font-family: 'Montserrat', sans-serif;
-}
-
-h5 {
-  font-family: 'Montserrat', sans-serif;
-}
-
-p {
-  line-height: 2.0;
-  font-family: 'Montserrat', sans-serif;
-}
-
-hr {
-  border: dotted #5F6769 6px;
-  border-bottom: none;
-  width: 4%;
-  margin: 100px auto;
-}
-
-a {
-  color: #11999e;
-  font-family: 'Montserrat', sans-serif;
-  margin: 10px 20px;
-  text-decoration: none;
-}
-
-a:hover {
-  color: #2bc4ad;
-}
-
-.top-container {
-  background-color: #E4F9F5;
-  position: relative;
-  padding-top: 100px;
-}
-
-.middle-container {
-  margin: 100px 0;
-}
-
-.bottom-container {
-  background-color: #E4F9F5;
-  padding: 50px 0 20px;
-}
-
-.intro-image{
+.main {
+  display: flex;
+  position: absolute;
+  justify-content: space-between;
+  background-color: #111;
+  color: #fff;
+  right: 0;
   width: 100%;
+  min-height: 100vh;
+  padding: 100px;
+  z-index: 2;
+  transition: 0.7s;
 }
 
-.skill-row {
-  width: 50%;
-  margin: 100px auto 100px auto;
-  text-align: left;
-}
-
-.intro {
-  width: 30%;
-  margin: auto;
-}
-
-.contact-message {
-  width: 40%;
-  margin: 40px auto 60px;
-}
-
-
-.copyright, h6 {
-  color: #11999E;
-  padding: 10px 0;
-}
-
-.bottom-cloud {
-  position: absolute;
-  padding-left: 200px;
-  padding-right: 200px;
-  padding-bottom: 10px;
-  left: 100px;
-  bottom: 585px;
-  width: 110px;
-  animation: ani 60s infinite;
-}
-
-.top-cloud {
-  position: absolute;
-  padding-left: 200px;
-  padding-right: 200px;
+.main.active {
   right: 300px;
-  top: 40px;
-  width: 125px;
-  animation: ani2 60s infinite;
 }
 
-.skill-logo-html5 {
-  width: 25%;
-  float: left;
-  margin-right: 30px;
+.main header {
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: space-between;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 40px 100px;
+  z-index: 10;
 }
 
-.skill-logo-css3 {
-  width: 25%;
-  float: left;
-  margin-right: 30px;
+.logo {
+  text-transform: uppercase;
+  cursor: pointer;
 }
 
-.profile-logo {
-  width: 25%;
+.toggle {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  background-image: url("menu.png");
+  background-repeat: no-repeat;
+  background-size: 30px;
+  background-position: center;
+  cursor: pointer;
 }
 
-.project-logo {
-  width: 25%;
+.toggle.active {
+  background-image: url("close.png");
+  background-repeat: no-repeat;
+  background-size: 25px;
+  background-position: center;
 }
 
-.btn {
-  background: #11CDD4;
-  background-image: -webkit-linear-gradient(top, #11CDD4, #11999E);
-  background-image: -moz-linear-gradient(top, #11CDD4, #11999E);
-  background-image: -ms-linear-gradient(top, #11CDD4, #11999E);
-  background-image: -o-linear-gradient(top, #11CDD4, #11999E);
-  background-image: linear-gradient(to bottom, #11CDD4, #11999E);
-  -webkit-border-radius: 8px;
-  -moz-border-radius: 8px;
-  border-radius: 8px;
-  color: #FFFFFF;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 20px;
-  padding: 10px 20px 10px 20px;
+.main video {
+  position: absolute;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #553e6f; /* #404764*/
+  mix-blend-mode: overlay;
+}
+
+.text {
+  margin-top: 100px;
+  position: relative;
+  z-index: 5;
+}
+
+.text h2 {
+  font-size: 5em;
+  font-weight: 800;
+  line-height: 1em;
+  text-transform: uppercase;
+}
+
+.text h3 {
+  font-size: 4em;
+  font-weight: 700;
+  line-height: 1em;
+  text-transform: uppercase;
+}
+
+.text p {
+  font-size: 1.1em;
+  font-weight: 400;
+  margin: 20px 0;
+  max-width: 700px;
+}
+
+.text a {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 1em;
+  background: #fff;
+  color: #111;
+  padding: 10px 30px;
   text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: 0.3s;
 }
 
-.btn:hover {
-  background: #30E3CB;
-  background-image: -webkit-linear-gradient(top, #30E3CB, #2bc4ad);
-  background-image: -moz-linear-gradient(top, #30E3CB, #2bc4ad);
-  background-image: -ms-linear-gradient(top, #30E3CB, #2bc4ad);
-  background-image: -o-linear-gradient(top, #30E3CB, #2bc4ad);
-  background-image: linear-gradient(to bottom, #30E3CB, #2bc4ad);
+.text a:hover {
+  letter-spacing: 5px;
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 20px;
+  z-index: 10;
+}
+
+.social li {
+  list-style: none;
+}
+
+.social li a {
+  display: inline-block;
+  color: #fff;
+  margin-right: 20px;
+  transform: scale(1.5);
+  transition: 0.5s;
+}
+
+.social li a:hover {
+  transform: scale(1.5) translateY(-15px);
+}
+
+.menu {
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100%;
+}
+
+.menu ul {
+  position: relative;
+  list-style: none;
+}
+
+.menu ul li {
+  padding-bottom: 10px;
+}
+
+.menu ul li a {
   text-decoration: none;
+  font-size: 24px;
+  color: #111;
 }
 
-.fadeInAnimation {
-  opacity: 0;
-  animation: fadeIn 3s forwards;
+.menu ul li a:hover {
+  color: #404764;
+  border-bottom: 2px #404764 solid;
 }
 
-#second {
-  animation-delay: 1s;
-}
-
-.test {display: inline-block;}
-.test2 {display: inline-block;}
-
-.blinking {
-   animation: blink 1.2s infinite;
-   font-size: 2.5em;
-}
-
-@keyframes blink {
-  0% {color: #66BFBF;}
-  49%{color: #66BFBF;}
-  60%{color: transparent;}
-  99%{color: transparent;}
-  100%{color:  #66BFBF;}
-}
-
-@keyframes fadeIn {
-  from {opacity: 0}
-  to {opacity: 1;}
-}
-
-@keyframes ani {
-  0% {
-    left: 0;
+@media (max-width: 798px) {
+  .main,
+  .main header {
+    padding: 40px;
   }
-  50% {
-    left: 720px;
+
+  .text h2 {
+    font-size: 3em;
   }
-  100% {
-    left: 0;
+
+  .text h3 {
+    font-size: 2em;
   }
 }
 
-@keyframes ani2 {
-  0% {
-    right: 0;
-  }
-
-  50%{
-    right: 720px;
-  }
-
-  100% {
-    right: 0;
-  }
-
-}
