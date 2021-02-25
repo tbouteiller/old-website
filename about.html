@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>About</title>
+  </head>
+  <body>
+    <!--Side bar-->
+    <div id="mySidebar" class="sidebar" class="flex">
+      <ul>
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+          >&times;</a
+        >
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+    <div class="about-container">
+      <!--NAV-->
+      <nav class="flex" id="about">
+        <div><h1>Tanner Bouteiller</h1></div>
+        <div class="menu" onclick="openNav()">
+          <i class="fas fa-bars"></i>
+        </div>
+      </nav>
+
+      <!--SHOWCASE-->
+      <div class="showcase">
+        <div class="showcase-text">
+          <h3>About Me</h3>
+          <p>
+            I am a first year Business Information Technology student at Red
+            River College. My primary focus is Full Stack Web Development and
+            also programming.
+          </p>
+        </div>
+      </div>
+      <img class="profile" src="profile.png" alt="" />
+      <!--SKILLS-->
+      <section class="skills">
+        <h3>Skills</h3>
+        <div class="card-container">
+          <div class="card">
+            <img class="html" src="html.png" alt="" />
+            <p class="card-text hide">asdadasdasdasdasdasdasdasdasdasdasd</p>
+          </div>
+          <div class="card">
+            <img class="css" src="css.png" alt="" />
+          </div>
+          <div class="card">
+            <img class="javascript" src="javascript.png" alt="" />
+          </div>
+          <div class="card">
+            <img class="bootstrap" src="bootstrap.png" alt="" />
+          </div>
+          <div class="card">
+            <img class="csharp" src="csharp.png" alt="" />
+          </div>
+          <div class="card">
+            <img class="java" src="java.png" alt="" />
+          </div>
+        </div>
+      </section>
+      <footer id="footer">
+        <ul class="flex">
+          <li><i class="fab fa-linkedin-in"></i></li>
+          <li><i class="fab fa-github"></i></li>
+          <li><i class="fab fa-twitter"></i></li>
+        </ul>
+      </footer>
+    </div>
+
+    <script>
+      function openNav() {
+        document.getElementById("mySidebar").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+      }
+
+      function closeNav() {
+        document.getElementById("mySidebar").style.width = "0";
+        document.getElementById("main").style.marginLeft = "0";
+      }
+
+      $(".card-text-wrapper").click(function () {
+        clickToExapndCards($(this));
+      });
+    </script>
+  </body>
+</html>
