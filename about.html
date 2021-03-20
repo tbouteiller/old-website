@@ -9,6 +9,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
     />
     <link rel="stylesheet" href="styles.css" />
+    <script src="script.js"></script>
     <title>About</title>
   </head>
   <body>
@@ -50,26 +51,72 @@
         <h3>Skills</h3>
         <div class="card-container">
           <div class="card">
-            <img class="html" src="html.png" alt="" />
-            <p class="card-text hide">asdadasdasdasdasdasdasdasdasdasdasd</p>
+            <i class="fab fa-html5 fa-6x"></i>
+            <p>HTML</p>
           </div>
           <div class="card">
-            <img class="css" src="css.png" alt="" />
+            <i class="fab fa-css3-alt fa-6x"></i>
+            <p>CSS</p>
           </div>
           <div class="card">
-            <img class="javascript" src="javascript.png" alt="" />
+            <i class="fab fa-js-square fa-6x"></i>
+            <p>JavaScript</p>
           </div>
           <div class="card">
-            <img class="bootstrap" src="bootstrap.png" alt="" />
+            <i class="fab fa-bootstrap fa-6x"></i>
+            <p>Bootstrap</p>
           </div>
           <div class="card">
-            <img class="csharp" src="csharp.png" alt="" />
+            <i class="fab fa-windows fa-6x"></i>
+            <p>C#</p>
           </div>
           <div class="card">
-            <img class="java" src="java.png" alt="" />
+            <i class="fab fa-java fa-6x"></i>
+            <p>Java</p>
           </div>
         </div>
       </section>
+
+      <section class="learning">
+        <h3>Currently Learning</h3>
+        <div class="item-container">
+          <div class="item react">
+            <div class="item-img">
+              <i class="fab fa-react fa-7x"></i>
+              <p>React</p>
+            </div>
+            <div class="item-desc">
+              I began learning the ins-and-outs of React in March 2021 to help
+              build user interfaces and reusable components. React is becoming
+              very popular in industry and I plan to keep learning the library
+              over the summer.
+            </div>
+          </div>
+          <div class="item node">
+            <div class="item-img">
+              <i class="fab fa-node-js fa-7x"></i>
+              <p class="">Node.js</p>
+            </div>
+            <div class="item-desc">
+              I am currently learning Node.js as it is a JavaScript runtime
+              which I can utilize to implement JavaScript as a server side
+              language.
+            </div>
+          </div>
+          <div class="item sass">
+            <div class="item-img">
+              <i class="fab fa-sass fa-6x"></i>
+              <p>Sass</p>
+            </div>
+            <div class="item-desc">
+              I wanted to start learning this CSS PreProcessor as it will enable
+              me to use additional features and allow my CSS to act more like a
+              programming language.
+            </div>
+          </div>
+        </div>
+      </section>
+
       <footer id="footer">
         <ul class="flex">
           <li><i class="fab fa-linkedin-in"></i></li>
@@ -78,21 +125,5 @@
         </ul>
       </footer>
     </div>
-
-    <script>
-      function openNav() {
-        document.getElementById("mySidebar").style.width = "250px";
-        document.getElementById("main").style.marginLeft = "250px";
-      }
-
-      function closeNav() {
-        document.getElementById("mySidebar").style.width = "0";
-        document.getElementById("main").style.marginLeft = "0";
-      }
-
-      $(".card-text-wrapper").click(function () {
-        clickToExapndCards($(this));
-      });
-    </script>
   </body>
 </html>
