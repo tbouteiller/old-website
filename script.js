@@ -16,7 +16,7 @@ window.onload = function () {
   window.addEventListener("scroll", scrollEffect);
 
   function scrollEffect() {
-    if (window.scrollY >= 350) {
+    if (window.scrollY >= 450) {
       REACT.style.opacity = "1";
       REACT.style.transform = "translateX(0px)";
       REACT.style.transition = "1s ease-in";
@@ -25,7 +25,7 @@ window.onload = function () {
       REACT.style.transform = "translateX(-500px)";
     }
 
-    if (window.scrollY >= 500) {
+    if (window.scrollY >= 650) {
       NODE.style.opacity = "1";
       NODE.style.transform = "translateX(0px)";
       NODE.style.transition = "1s ease-in";
@@ -34,7 +34,7 @@ window.onload = function () {
       NODE.style.transform = "translateX(-500px)";
     }
 
-    if (window.scrollY >= 650) {
+    if (window.scrollY >= 800) {
       SASS.style.opacity = "1";
       SASS.style.transform = "translateX(0px)";
       SASS.style.transition = "1s ease-in";
