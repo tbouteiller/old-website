@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js"></script>
+    <title>About</title>
+  </head>
+  <body>
+    <!--Page Transition-->
+    <div class="transition transition-1 is-active"></div>
+    <!--Side bar-->
+    <div id="mySidebar" class="sidebar" class="flex">
+      <ul>
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+          >&times;</a
+        >
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <!--<li><a href="#">Projects</a></li>-->
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+    <div class="about-container">
+      <!--NAV-->
+      <nav class="flex" id="about">
+        <div><h1>Tanner Bouteiller</h1></div>
+        <div class="menu" onclick="openNav()">
+          <i class="fas fa-bars"></i>
+        </div>
+      </nav>
+
+      <!--SHOWCASE-->
+      <div class="showcase">
+        <div class="showcase-text">
+          <h3>Get In Touch</h3>
+          <p>
+            If you would like to contact me, feel free to fill out the form and
+            leave a message.
+          </p>
+        </div>
+      </div>
+      <div form>
+        <!--FORM-->
+        <form
+          action="index.html"
+          id="contactform"
+          class="needs-validation"
+          novalidate
+        >
+          <div class="form-group">
+            <label for="InputName">Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="InputName"
+              placeholder="Please enter your name."
+              required
+            />
+            <div class="invalid-feedback">This field is required.</div>
+          </div>
+          <div class="form-group">
+            <label for="InputTel">Phone</label>
+            <input
+              type="tel"
+              pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+              class="form-control"
+              id="inputTel"
+              placeholder="Please enter your phone number."
+              aria-describedby="telHelp"
+              required
+            />
+            <small class="text-muted">format: 111-1111-1111</small>
+            <div class="invalid-feedback">This field is required.</div>
+          </div>
+          <div class="form-group">
+            <label for="InputEmail">Email address</label>
+            <input
+              type="email"
+              class="form-control"
+              id="InputEmail"
+              placeholder="Please enter your email address."
+              required
+            />
+            <div class="invalid-feedback">This field is required.</div>
+          </div>
+          <div class="form-group">
+            <label for="InputMessage">Message</label>
+            <input
+              type="text"
+              class="form-control"
+              id="InputMessage"
+              placeholder="Please enter your message."
+              required
+            />
+            <div class="invalid-feedback">This field is required.</div>
+          </div>
+          <button type="submit" class="btn btn-primary formButton" id="submit">
+            Submit
+          </button>
+          <button type="reset" class="btn btn-primary formButton" id="reset">
+            Reset
+          </button>
+        </form>
+      </div>
+      <!--SKILLS-->
+      <section class="skills">
+        <br /><br /><br /><br />
+        <h3>Where to now?</h3>
+        <div class="pagination-container">
+          <ul class="pagination justify-content-center">
+            <li class="page-item">
+              <a class="page-link" href="index.html">Home</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="about.html">About</a>
+            </li>
+            <li class="page-item disabled">
+              <a class="page-link" href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <footer id="footer">
+        <ul class="flex">
+          <li><i class="fab fa-linkedin-in"></i></li>
+          <li><i class="fab fa-github"></i></li>
+          <li><i class="fab fa-twitter"></i></li>
+        </ul>
+      </footer>
+    </div>
+    <script>
+      window.onload = pageTransition();
+    </script>
+  </body>
+</html>
