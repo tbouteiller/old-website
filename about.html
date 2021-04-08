@@ -8,11 +8,18 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
     <link rel="stylesheet" href="styles.css" />
     <script src="script.js"></script>
     <title>About</title>
   </head>
+
   <body>
+    <!--Page Transition-->
+    <div class="transition transition-1 is-active"></div>
     <!--Side bar-->
     <div id="mySidebar" class="sidebar" class="flex">
       <ul>
@@ -21,8 +28,8 @@
         >
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
-        <li><a href="#">Projects</a></li>
-        <li><a href="#">Contact</a></li>
+        <!--<li><a href="#">Projects</a></li>-->
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </div>
     <div class="about-container">
@@ -125,5 +132,9 @@
         </ul>
       </footer>
     </div>
+    <script>
+      window.onload = pageTransition();
+      window.onload = scrollEffect();
+    </script>
   </body>
 </html>
