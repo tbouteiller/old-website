@@ -8,11 +8,31 @@
   box-sizing: border-box;
 }
 
-/*Utiliy*/
+/*PAGE TRANSITIONS*/
+.transition-1 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 101;
+  background-color: #0e0e0e;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.75s ease-out;
+}
+
+.transition-1.is-active {
+  pointer-events: all;
+  opacity: 1;
+}
+
+/*FLEX UTILITY*/
 .flex {
   display: flex;
 }
 
+/*VIDEO UTILITY*/
 #myVideo {
   position: fixed;
   object-fit: cover;
@@ -105,9 +125,9 @@ section p {
 }
 
 button {
-  background-color: #ddd;
+  background-color: #0275d8;
   border: none;
-  color: black;
+  color: white;
   padding: 8px 16px;
   text-align: center;
   font-size: 16px;
@@ -123,6 +143,14 @@ button:hover {
   letter-spacing: 2px;
   color: white;
   outline: none;
+}
+
+.formButton {
+  transition: 0.5s;
+}
+
+.formButton:hover {
+  letter-spacing: 0;
 }
 
 /*FOOTER*/
@@ -211,6 +239,7 @@ footer i:hover {
 .sidebar a:hover {
   font-weight: 500;
   transition: 0.2s;
+  color: #0275d8;
 }
 
 /****************ABOUT PAGE*******************/
@@ -223,7 +252,7 @@ footer i:hover {
   padding-right: 10px;
 }
 #about {
-  background-color: black;
+  background-color: #0e0e0e;
   color: white;
 }
 
@@ -231,7 +260,7 @@ footer i:hover {
 .showcase {
   position: relative;
   height: 300px;
-  background-color: black;
+  background-color: #0e0e0e;
   z-index: 5;
 }
 
@@ -242,7 +271,7 @@ footer i:hover {
   color: white;
 }
 .showcase h3 {
-  font-size: 2em;
+  font-size: 3em;
   font-weight: 600;
   text-transform: uppercase;
   font-family: "Poppins", sans-serif;
@@ -263,8 +292,8 @@ footer i:hover {
   bottom: -70px;
   right: 0;
   left: 0;
-  background-color: black;
-  box-shadow: 0 0px 2px black;
+  background-color: #0e0e0e;
+  box-shadow: 0 10px 2px #0275d8;
   transform: skewY(-2deg);
   -webkit-transform: skewY(-2deg);
   -moz-transform: skewY(-2deg);
@@ -331,8 +360,8 @@ footer i:hover {
   text-align: center;
   align-items: center;
   justify-content: center;
-  height: 200px;
-  width: 150px;
+  height: 210px;
+  width: 165px;
   margin: 10px 20px 0px 20px;
   flex-wrap: wrap;
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
@@ -415,6 +444,29 @@ nav img {
   margin-top: 25px;
 }
 
+/*CONTACT PAGE*/
+
+form {
+  font-family: "Oxanium", sans-serif;
+  top: 125px;
+  right: 175px;
+  position: absolute;
+  padding: 20px;
+  width: 500px;
+  z-index: 5;
+  background-color: #fafafa;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.whereTo {
+  height: 150px;
+}
+
+.pagination-container {
+  font-family: "Oxanium", sans-serif;
+  margin-top: 15px;
+}
+
 @media (max-width: 968px) {
   .profile {
     display: none;
@@ -422,6 +474,15 @@ nav img {
 
   .showcase p {
     width: 70%;
+  }
+
+  form {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 150px;
+    width: 400px;
+    position: static;
+    z-index: 10;
   }
 }
 
