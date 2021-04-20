@@ -8,6 +8,16 @@
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #0275d8;
+}
+
 /*PAGE TRANSITIONS*/
 .transition-1 {
   position: fixed;
