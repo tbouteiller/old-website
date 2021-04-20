@@ -20,11 +20,11 @@
     <!--Page Transition-->
     <div class="transition transition-1 is-active"></div>
     <!--Side bar-->
-    <div id="mySidebar" class="sidebar" class="flex">
+    <div id="mySidebar" class="sidebar flex">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+        >&times;</a
+      >
       <ul>
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
-          >&times;</a
-        >
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <!--<li><a href="#">Projects</a></li>-->
@@ -50,69 +50,69 @@
           </p>
         </div>
       </div>
-      <div form>
-        <!--FORM-->
-        <form
-          action="index.html"
-          id="contactform"
-          class="needs-validation"
-          novalidate
-        >
-          <div class="form-group">
-            <label for="InputName">Name</label>
-            <input
-              type="text"
-              class="form-control"
-              id="InputName"
-              placeholder="Please enter your name."
-              required
-            />
-            <div class="invalid-feedback">This field is required.</div>
-          </div>
-          <div class="form-group">
-            <label for="InputTel">Phone</label>
-            <input
-              type="tel"
-              pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-              class="form-control"
-              id="inputTel"
-              placeholder="Please enter your phone number."
-              aria-describedby="telHelp"
-              required
-            />
-            <small class="text-muted">format: 111-111-1111</small>
-            <div class="invalid-feedback">This field is required.</div>
-          </div>
-          <div class="form-group">
-            <label for="InputEmail">Email address</label>
-            <input
-              type="email"
-              class="form-control"
-              id="InputEmail"
-              placeholder="Please enter your email address."
-              required
-            />
-            <div class="invalid-feedback">This field is required.</div>
-          </div>
-          <div class="form-group">
-            <label for="InputMessage">Message</label>
-            <input
-              type="text"
-              class="form-control"
-              id="InputMessage"
-              placeholder="Please enter your message."
-              required
-            />
-            <div class="invalid-feedback">This field is required.</div>
-          </div>
-          <button type="submit" class="btn btn-primary formButton" id="submit">
-            Submit
-          </button>
-          <button type="reset" class="btn btn-primary formButton" id="reset">
-            Reset
-          </button>
-        </form>
-      </div>
+
+      <!--FORM-->
+      <form
+        action="index.html"
+        id="contactform"
+        class="needs-validation"
+        novalidate
+      >
+        <div class="form-group">
+          <label for="InputName">Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="InputName"
+            placeholder="Please enter your name."
+            required
+          />
+          <div class="invalid-feedback">This field is required.</div>
+        </div>
+        <div class="form-group">
+          <label for="InputTel">Phone</label>
+          <input
+            type="tel"
+            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+            class="form-control"
+            id="inputTel"
+            placeholder="Please enter your phone number."
+            aria-describedby="telHelp"
+            required
+          />
+          <small class="text-muted telHelp">format: 111-1111-1111</small>
+          <div class="invalid-feedback">This field is required.</div>
+        </div>
+        <div class="form-group">
+          <label for="InputEmail">Email address</label>
+          <input
+            type="email"
+            class="form-control"
+            id="InputEmail"
+            placeholder="Please enter your email address."
+            required
+          />
+          <div class="invalid-feedback">This field is required.</div>
+        </div>
+        <div class="form-group">
+          <label for="InputMessage">Message</label>
+          <input
+            type="text"
+            class="form-control"
+            id="InputMessage"
+            placeholder="Please enter your message."
+            required
+          />
+          <div class="invalid-feedback">This field is required.</div>
+        </div>
+        <button type="submit" class="btn btn-primary formButton" id="submit">
+          Submit
+        </button>
+        <button type="reset" class="btn btn-primary formButton" id="reset">
+          Reset
+        </button>
+      </form>
+
       <!--SKILLS-->
       <section class="skills">
         <br /><br /><br /><br />
